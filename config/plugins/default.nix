@@ -4,20 +4,12 @@
     ./git.nix
     ./lsp.nix
     ./lualine.nix
+    ./neo-tree.nix
     ./noice.nix
     ./treesitter.nix
   ];
 
     plugins = {
-        nvim-tree = {
-            enable = true;
-            openOnSetup = true;
-            openOnSetupFile = true;
-        };
-
-        #dependancy for nvim tree
-        web-devicons.enable = true;
-        
         # -- Language Server Protocol --
         lsp.enable = true;
         lsp.servers = {

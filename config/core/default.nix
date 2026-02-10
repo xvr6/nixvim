@@ -1,6 +1,7 @@
 { 
-	imports = [
-		./opts.nix
-	];
-
+  imports = [
+    ./autoCmd.nix
+    ./opts.nix
+      
+  ];
 }
