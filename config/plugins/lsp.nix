@@ -18,8 +18,6 @@
       # -- KEYBINDS
       keymaps = {
         silent = true;
-        diagnostic = {
-        };
         lspBuf = {
           "gd" = "definition";
           "gD" = "declaration";
