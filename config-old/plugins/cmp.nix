@@ -8,44 +8,55 @@
     cmp_luasnip.enable = true;
     cmp-cmdline.enable = false;
     nix.enable = true;
+
     cmp = {
       enable = true;
       autoEnableSources = true;
+
       settings = {
-        # snippet = { expand = "luasnip"; };
+
         snippet = {
           expand = "function(args) require('luasnip').lsp_expand(args.body) end";
         };
+
         experimental = {
           ghost_text = true;
         };
+
         performance = {
           debounce = 60;
           fetchingTimeout = 200;
           maxViewEntries = 30;
         };
+
         formatting = {
-          fields = ["kind" "abbr" "menu"];
+          fields = [
+            "kind"
+            "abbr"
+            "menu"
+          ];
         };
+
         window = {
           completion = {
-            # border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             border = "rounded";
             winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
           };
+
           documentation = {
-            # border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             border = "rounded";
           };
         };
+
         sources = [
-          {name = "nvim_lsp";}
-          {name = "luasnip";}
-          {name = "buffer";}
-          {name = "nvim_lua";}
-          {name = "path";}
-          {name = "crates";}
+          { name = "nvim_lsp"; }
+          { name = "luasnip"; }
+          { name = "buffer"; }
+          { name = "nvim_lua"; }
+          { name = "path"; }
+          { name = "crates"; }
         ];
+
         mapping = {
           "<Tab>" = "cmp.mapping.confirm({ select = true })";
           "<CR>" = "cmp.mapping.confirm({ select = true })";

@@ -1,28 +1,29 @@
 {
+  # Import all your configuration modules here
   imports = [
     ./alpha.nix
     ./bufferline.nix
     ./cmp.nix
+    # ./cmake.nix
+    ./comment.nix
+    ./cursorline.nix
+    ./dap.nix
+    # ./flash.nix
     ./format.nix
     ./git.nix
+    ./hop.nix
     ./lsp.nix
     ./lualine.nix
-    ./neo-tree.nix
+    ./lint.nix
+    ./markdown.nix
     ./noice.nix
-    ./presence.nix
+    ./nvimtree.nix
+    # ./presence.nix
     ./statuscol.nix
     ./telescope.nix
-    ./toggleterm.nix
-    ./treesitter.nix
     ./ufo.nix
-
+    ./project.nix
+    # ./toggleterm.nix
+    ./treesitter.nix
   ];
-
-  plugins = {
-    # -- Cosmetic Tweaks --
-    todo-comments.enable = true;
-    # lightline.enable = true;
-    highlight-colors.enable = true;
-
-  };
 }

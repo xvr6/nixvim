@@ -1,7 +1,7 @@
 {
   imports = [
-    ./autoCmd.nix
-    ./opts.nix
-
+    ./options.nix
+    ./autocmd.nix
+    ./keymaps.nix
   ];
 }

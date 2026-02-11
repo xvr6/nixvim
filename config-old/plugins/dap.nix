@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   extraPlugins = with pkgs.vimPlugins; [
     nvim-gdb
   ];
@@ -36,7 +37,10 @@
     dap-ui = {
       enable = true;
       settings.floating.mappings = {
-        close = ["<ESC>" "q"];
+        close = [
+          "<ESC>"
+          "q"
+        ];
       };
     };
     dap-virtual-text.enable = true;

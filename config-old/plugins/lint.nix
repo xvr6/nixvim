@@ -1,31 +1,31 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins.lint = {
     enable = true;
     lintersByFt = {
-      # text = [ "write_good" ];
-      markdownlint = ["markdownlint" "vale"];
-      markdown = ["markdownlint"];
-      c = ["clangtidy"];
-      cpp = ["clangtidy"];
-      # css = ["eslint_d"];
-      gitcommit = ["commitlint"];
-      go = ["golangcilint"];
-      # javascript = ["eslint_d"];
-      # javascriptreact = ["eslint_d"];
-      json = ["jsonlint"];
-      lua = ["luacheck"];
-      nix = ["nix"];
-      python = ["ruff"];
-      # sh = ["shellcheck"];
-      # typescript = ["eslint_d"];
-      # typescriptreact = ["eslint_d"];
-      yaml = ["yamllint"];
+      text = [ "write_good" ];
+      markdownlint = [
+        "markdownlint"
+        "vale"
+      ];
+      markdown = [ "markdownlint" ];
+      c = [ "clangtidy" ];
+      cpp = [ "clangtidy" ];
+      css = [ "eslint_d" ];
+      gitcommit = [ "commitlint" ];
+      go = [ "golangcilint" ];
+      javascript = [ "eslint_d" ];
+      javascriptreact = [ "eslint_d" ];
+      json = [ "jsonlint" ];
+      lua = [ "luacheck" ];
+      nix = [ "nix" ];
+      python = [ "ruff" ];
+      sh = [ "shellcheck" ];
+      typescript = [ "eslint_d" ];
+      typescriptreact = [ "eslint_d" ];
+      yaml = [ "yamllint" ];
     };
     linters = {
-      # Not working currently:
-      # write_good = {
-      #   cmd = "${pkgs.write-good}/bin/write-good";
-      # };
     };
   };
   extraConfigLua = ''

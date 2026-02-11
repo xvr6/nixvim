@@ -1,13 +1,19 @@
 {
   plugins.lualine = {
-    enable = true;
     settings = {
-      #iconsEnabled = true;
-      extensions = ["nvim-tree" "nvim-dap-ui" "toggleterm" "quickfix"];
+      extensions = [
+        "nvim-tree"
+        "nvim-dap-ui"
+        "toggleterm"
+      ];
+
       options = {
         globalstatus = true;
         disabled_filetypes = {
-          statusline = ["dashboard" "alpha"];
+          statusline = [
+            "dashboard"
+            "alpha"
+          ];
         };
         component_separators.left = "";
         component_separators.right = "";
@@ -19,11 +25,12 @@
           winbar = 1000;
         };
       };
-      sections.lualine_c = ["filename"];
-      sections.lualine_x = ["location"];
-      tabline = {};
-      winbar = {};
-      inactive_winbar = {};
+
+      sections.lualine_c = [ "filename" ];
+      sections.lualine_x = [ "location" ];
+      tabline = { };
+      winbar = { };
+      inactive_winbar = { };
     };
   };
 }

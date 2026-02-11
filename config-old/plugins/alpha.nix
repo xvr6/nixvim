@@ -57,7 +57,7 @@
                       desc = val;
                     }
                   ];
-                  shortcut = "SPC ${shortcut}";
+                  shortcut = "<leader> ${shortcut}";
                   position = "center";
                   cursor = 3;
                   width = 40;
@@ -103,7 +103,7 @@
         }
         {
           type = "text";
-          val = "Better than neovim.";
+          val = ":3c";
           opts = {
             position = "center";
             # hl = "Keyword";

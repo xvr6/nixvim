@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins.telescope = {
     enable = true;
     extensions = {
@@ -11,7 +12,7 @@
     };
     settings = {
       defaults = {
-        border = {};
+        border = { };
         layout_strategy = "horizontal";
         sorting_strategy = "ascending";
         set_env.COLORTERM = "truecolor";
