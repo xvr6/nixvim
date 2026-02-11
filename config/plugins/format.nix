@@ -46,15 +46,15 @@
     };
   };
 
-  extraConfigLuaPre = ''
-    -- Formatting function for conform
-    _G.format_with_conform = function()
-    	local conform = require("conform")
-    	conform.format({
-    		lsp_fallback = true,
-    		async = false,
-    		timeout_ms = 2000,
-    	})
-    end
-  '';
+# extraConfigLuaPre = ''
+#   -- Formatting function for conform
+#   _G.format_with_conform = function()
+#   	local conform = require("conform")
+#   	conform.format({
+#   		lsp_fallback = true,
+#   		async = false,
+#   		timeout_ms = 2000,
+#   	})
+#   end
+# '';
 }

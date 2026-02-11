@@ -1,23 +1,24 @@
-{ pkgs, ... }:
-{
-  # Import all your configuration modules here
-  imports = [
-    ./core
-    ./themes
-    ./plugins
-  ];
-  viAlias = true;
-  vimAlias = true;
-  clipboard = {
-    register = "unnamedplus";
-    providers = {
-      wl-copy.enable = true;
-      xclip.enable = true;
-    };
-  };
-  globals.mapleader = " ";
+{ pkgs, ... }: {
+    imports = [
+        ./core
+        ./plugins
+        ./themes
+    ];
 
-  # Misc plugins
+    viAlias = true;
+    vimAlias = true;
+    # defaultEditor = true;
+    
+    clipboard = {
+        register = "unnamedplus";
+        providers = {
+            wl-copy.enable = true;
+            xclip.enable = true;
+        };
+    };
+
+    globals.mapleader = "\\";
+
   plugins = {
     persistence.enable = true;
     direnv.enable = true;
@@ -26,12 +27,6 @@
     nvim-autopairs.enable = true;
     markdown-preview.enable = true;
     tmux-navigator.enable = true;
-    zellij = {
-      enable = true;
-      settings = {
-        vimTmuxNavigatorKeybinds = true;
-      };
-    };
     better-escape = {
       enable = true;
       settings.timeout = 200;
@@ -41,20 +36,19 @@
       settings.show_keys = true;
     };
   };
+
   extraPlugins = with pkgs.vimPlugins; [
     vim-be-good
     nui-nvim
   ];
+  
   extraPackages = with pkgs; [
-    # ripgrep
+    ripgrep
     tmux-sessionizer
-    # Formatters
+    
+    # -- Formatters
     nixfmt
-    # asmfmt
-    # astyle
     ruff
-    # black # Ruff replaces this
-    # isort # Ruff replaces this
     # pylint
     cmake-format
     # gofumpt
@@ -65,27 +59,23 @@
     rustfmt
     shfmt
     stylua
-    # Debuggers / misc deps
-    asm-lsp
-    # bashdb
-    # clang-tools
+    
+    # -- Debuggers / misc deps
     delve
     golangci-lint
     fd
     gdb
     go
-    # lldb_17
-    # llvmPackages.bintools-unwrapped
     marksman
-    # Linters
+    
+    # -- Linters
+    
     commitlint
-    # eslint_d
+    eslint_d
     hadolint
-    # html-tidy
+    html-tidy
     luajitPackages.luacheck
     markdownlint-cli
-    # shellcheck
-    # vale
     yamllint
   ];
 }

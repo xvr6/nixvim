@@ -27,12 +27,6 @@
     nvim-autopairs.enable = true;
     markdown-preview.enable = true;
     tmux-navigator.enable = true;
-    zellij = {
-      enable = true;
-      settings = {
-        vimTmuxNavigatorKeybinds = true;
-      };
-    };
     better-escape = {
       enable = true;
       settings.timeout = 200;

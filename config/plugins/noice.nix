@@ -2,12 +2,9 @@
   plugins.noice = {
     enable = true;
     settings = {
-      notify = {
-        enabled = false;
-      };
-      messages = {
-        enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason (untested)
-      };
+      notify.enabled = false;
+      messages.enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason (untested)
+      
       lsp = {
         message = {
           enabled = true;
