@@ -1,0 +1,42 @@
+{ config, ... }:
+{
+  colorschemes.tokyonight = {
+    enable = config.colorschemes.base16.enable != true;
+    settings = {
+      style = "moon";
+      term_colors = true;
+      transparent_background = true;
+      integrations = {
+        bufferline = true;
+        cmp = true;
+        noice = true;
+        notify = true;
+        neotree = true;
+        harpoon = true;
+        gitsigns = true;
+        which_key = true;
+        lualine = true;
+        illuminate = {
+          enabled = true;
+        };
+        treesitter = true;
+        treesitter_context = true;
+        telescope.enabled = true;
+        indent_blankline.enabled = true;
+        mini.enabled = true;
+        native_lsp = {
+          enabled = true;
+          inlay_hints = {
+            background = true;
+          };
+          underlines = {
+            errors = [ "underline" ];
+            hints = [ "underline" ];
+            information = [ "underline" ];
+            warnings = [ "underline" ];
+          };
+        };
+      };
+    };
+  };
+}

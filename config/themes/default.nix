@@ -1,6 +1,7 @@
 {
   imports = [
-    ./catppuccin.nix
+    #./catppuccin.nix
+    ./tokyo.nix
     # ./onedark.nix
     # ./base16-radium.nix
   ];

@@ -17,7 +17,7 @@
         };
     };
 
-    globals.mapleader = "\\";
+   #globals.mapleader = "\\";
 
   plugins = {
     persistence.enable = true;
@@ -69,7 +69,6 @@
     marksman
     
     # -- Linters
-    
     commitlint
     eslint_d
     hadolint
