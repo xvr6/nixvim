@@ -1,17 +1,17 @@
 {
   plugins = {
     treesitter-context.enable = false;
- 
+
     treesitter = {
       enable = true;
       nixvimInjections = true;
       nixGrammars = true;
       folding.enable = false;
-    
+
       settings = {
         indent.enable = true;
         # incremental_selection.enable = true;
-        
+
         incremental_selection = {
           enable = true;
 

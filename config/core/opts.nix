@@ -1,13 +1,17 @@
- {
+{
   opts = {
+    termguicolors = true;
+    signcolumn = "yes";
+
     #line numbers
     number = true;
     relativenumber = true;
 
     #tab settings
-    tabstop = 4;
-    shiftwidth = 4;
-    softtabstop = 4;
+    tabstop = 2;
+    shiftwidth = 2;
+    softtabstop = 2;
+    showtabline = 2;
     expandtab = true;
     shiftround = true;
     autoindent = true;
@@ -22,10 +26,14 @@
 
     # better completions
     updatetime = 50;
-    completeopt = ["menuone" "noselect" "noinsert"];
+    completeopt = [
+      "menuone"
+      "noselect"
+      "noinsert"
+    ];
 
     #highlight line where cursor is
-    cursorline = true; 
+    cursorline = true;
 
     # See: https://github.com/kevinhwang91/nvim-ufo#minimal-configuration
     foldcolumn = "1";
@@ -34,4 +42,4 @@
     foldenable = true;
   };
 
- }
+}

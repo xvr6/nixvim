@@ -9,11 +9,11 @@
       enable = true;
 
       # -- LANGUAGES
-      servers = { 
+      servers = {
         nixd.enable = true;
         vue_ls.enable = true;
-        gopls.enable = true;  
-      }; 
+        gopls.enable = true;
+      };
 
       # -- KEYBINDS
       keymaps = {

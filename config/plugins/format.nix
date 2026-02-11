@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   keymaps = [
     {
       mode = "n";
@@ -9,29 +10,52 @@
       };
     }
   ];
-  
+
   plugins.conform-nvim = {
     enable = true;
     settings = {
       formatters_by_ft = {
-        c = ["astyle"];
-        cpp = ["astyle"];
-        css = ["prettierd" "prettier"];
-        cmake = ["cmake_format"];
-        go = ["goimports" "gofumpt" "golines"];
-        html = ["prettierd" "prettier"];
-        javascript = ["prettierd" "prettier"];
-        javascriptreact = ["prettier"];
-        json = ["prettier"];
-        lua = ["stylua"];
-        markdown = ["prettier"];
-        nix = ["nixfmt"];
-        python = ["isort" "black"];
-        rust = ["rustfmt"];
-        sh = ["shfmt"];
-        typescript = ["prettierd" "prettier"];
-        typescriptreact = ["prettier"];
-        yaml = ["prettierd" "prettier"];
+        c = [ "astyle" ];
+        cpp = [ "astyle" ];
+        css = [
+          "prettierd"
+          "prettier"
+        ];
+        cmake = [ "cmake_format" ];
+        go = [
+          "goimports"
+          "gofumpt"
+          "golines"
+        ];
+        html = [
+          "prettierd"
+          "prettier"
+        ];
+        javascript = [
+          "prettierd"
+          "prettier"
+        ];
+        javascriptreact = [ "prettier" ];
+        json = [ "prettier" ];
+        lua = [ "stylua" ];
+        markdown = [ "prettier" ];
+        nix = [ "nixfmt" ];
+        python = [
+
+          "isort"
+          "black"
+        ];
+        rust = [ "rustfmt" ];
+        sh = [ "shfmt" ];
+        typescript = [
+          "prettierd"
+          "prettier"
+        ];
+        typescriptreact = [ "prettier" ];
+        yaml = [
+          "prettierd"
+          "prettier"
+        ];
       };
 
       formatters = {
