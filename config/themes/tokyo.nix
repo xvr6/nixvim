@@ -14,6 +14,7 @@
         neotree = true;
         harpoon = true;
         gitsigns = true;
+        todo-comments = true;
         which_key = true;
         lualine = true;
         illuminate = {

@@ -32,6 +32,7 @@
         cpp
         regex
         gitcommit
+        go
         gitignore
         markdown
         markdown_inline

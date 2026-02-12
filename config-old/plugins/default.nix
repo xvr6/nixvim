@@ -19,7 +19,7 @@
   ];
 
   plugins = {
-    # -- Cosmetic Tweaks --
+    # -- cosmetic tweaks --
     todo-comments.enable = true;
     # lightline.enable = true;
     highlight-colors.enable = true;
