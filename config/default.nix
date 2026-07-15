@@ -1,23 +1,24 @@
-{ pkgs, ... }: {
-    imports = [
-        ./core
-        ./plugins
-        ./themes
-    ];
+{ pkgs, ... }:
+{
+  imports = [
+    ./core
+    ./plugins
+    ./themes
+  ];
 
-    viAlias = true;
-    vimAlias = true;
-    # defaultEditor = true;
-    
-    clipboard = {
-        register = "unnamedplus";
-        providers = {
-            wl-copy.enable = true;
-            xclip.enable = true;
-        };
+  viAlias = true;
+  vimAlias = true;
+  # defaultEditor = true;
+
+  clipboard = {
+    register = "unnamedplus";
+    providers = {
+      wl-copy.enable = true;
+      xclip.enable = true;
     };
+  };
 
-   #globals.mapleader = "\\";
+  #globals.mapleader = "\\";
 
   plugins = {
     persistence.enable = true;
@@ -38,14 +39,32 @@
   };
 
   extraPlugins = with pkgs.vimPlugins; [
-    vim-be-good
+    #vim-be-good
     nui-nvim
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "tuxedo";
+      src = pkgs.fetchFromGitHub {
+        owner = "IogaMaster";
+        repo = "tuxedo.nvim";
+        rev = "65650b0ae3b1c3755a43306b07ada13bd78d47ac"; # Use a specific commit or tag for reproducibility
+        sha256 = "sha256-e8Vk2QvMNDDpYCiTWwm5IgDlDhVKj2g+kNHpLbkYGx4="; # Replace with the actual hash
+      };
+    })
   ];
-  
+
+  extraConfigLua = ''
+    require('tuxedo').setup({
+      create_todo_file = true,
+    	width_ratio = 0.95,
+    	height_ratio = 0.80,
+    })
+  '';
+
   extraPackages = with pkgs; [
+    tuxedo
     ripgrep
     tmux-sessionizer
-    
+
     # -- Formatters
     nixfmt
     ruff
@@ -54,12 +73,12 @@
     # gofumpt
     # golines
     # gotools
-    nodePackages.prettier
+    prettier
     prettierd
     rustfmt
     shfmt
     stylua
-    
+
     # -- Debuggers / misc deps
     delve
     golangci-lint
@@ -67,7 +86,7 @@
     gdb
     go
     marksman
-    
+
     # -- Linters
     commitlint
     eslint_d

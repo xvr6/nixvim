@@ -5,7 +5,14 @@
     vim.keymap.set("n", "<leader>x", "<CMD>!chmod +x %<CR>", { desc = "Make Executable" })
   '';
   keymaps = [
-    # Useful keymaps
+    {
+      mode = "n";
+      key = "<leader>tt";
+      action = "<cmd>Tuxedo<CR>";
+      options = {
+        desc = "Open Tuxedo Task Manager";
+      };
+    }
     {
       mode = "v";
       key = "p";
@@ -62,7 +69,10 @@
 
     # Window navigation
     {
-      mode = ["n" "t"];
+      mode = [
+        "n"
+        "t"
+      ];
       key = "<C-k>";
       action = "<Cmd>wincmd k<CR>";
       options = {
@@ -70,7 +80,10 @@
       };
     }
     {
-      mode = ["n" "t"];
+      mode = [
+        "n"
+        "t"
+      ];
       key = "<C-j>";
       action = "<Cmd>wincmd j<CR>";
       options = {
@@ -78,7 +91,10 @@
       };
     }
     {
-      mode = ["n" "t"];
+      mode = [
+        "n"
+        "t"
+      ];
       key = "<C-l>";
       action = "<Cmd>wincmd l<CR>";
       options = {
@@ -86,7 +102,10 @@
       };
     }
     {
-      mode = ["n" "t"];
+      mode = [
+        "n"
+        "t"
+      ];
       key = "<C-h>";
       action = "<Cmd>wincmd h<CR>";
       options = {
@@ -122,7 +141,10 @@
       };
     }
     {
-      mode = ["v" "x"];
+      mode = [
+        "v"
+        "x"
+      ];
       key = "<A-k>";
       action = "<CMD>m '<-2<CR>gv=gv";
       options = {
@@ -130,7 +152,10 @@
       };
     }
     {
-      mode = ["v" "x"];
+      mode = [
+        "v"
+        "x"
+      ];
       key = "<A-j>";
       action = "<CMD>m '>+1<CR>gv=gv";
       options = {
