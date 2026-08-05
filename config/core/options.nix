@@ -31,7 +31,11 @@
 
     # Much better completions
     updatetime = 50;
-    completeopt = ["menuone" "noselect" "noinsert"];
+    completeopt = [
+      "menuone"
+      "noselect"
+      "noinsert"
+    ];
 
     # swapfile = false;
     # backup = false;
