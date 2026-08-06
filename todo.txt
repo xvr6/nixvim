@@ -1,0 +1,1 @@
+(A) when using cmp, unable to change to other options other than first in list
