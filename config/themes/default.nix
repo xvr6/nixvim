@@ -2,8 +2,7 @@
   imports = [
     #./catppuccin.nix
     ./tokyo.nix
-    # ./onedark.nix
-    # ./base16-radium.nix
+    ./icons.nix
   ];
   # config.extraConfigLua = ''vim.cmd("colorscheme catppuccin-mocha")'';
 }

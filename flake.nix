@@ -7,8 +7,6 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
   };
 
-  # ---
-
   outputs =
     { nixvim, flake-parts, ... }@inputs:
 
@@ -26,11 +24,10 @@
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
-            inherit system; # or alternatively, set `pkgs`
-            module = import ./config; # import the module - specifically: ./config/default.nix
+            inherit system;
+            module = import ./config;
 
             extraSpecialArgs = {
-              # inherit (inputs) foo;
             };
           };
 
