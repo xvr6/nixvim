@@ -16,6 +16,12 @@
             enabled = true;
             leave_dirs_open = true;
           };
+          filtered_items = {
+            visible = false;
+            hide_dotfiles = false;
+            hide_gitignored = false;
+            hide_by_name = [".git" ".github"];
+          };
         };
       };
     };
